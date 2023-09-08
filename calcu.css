@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+/* 
+coloors.com
+gradient maker */
+body {
+  height: 100vh;
+  background-image: linear-gradient(to bottom, #eaee44, #33d0ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator {
+  border: 1px solid black;
+  width: 40%;
+  height: 100%;
+  box-shadow: 0 2px 10px black;
+  position: relative;
+}
+.screens {
+  background: #000;
+  padding: 1rem;
+  min-height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.upper {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #aaa;
+  text-align: right;
+  word-break: break-all;
+}
+
+.lower {
+  flex: 1;
+  display: flex;
+  align-items: end;
+  justify-content: flex-end;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: right;
+  word-break: break-all;
+  position: relative;
+}
+.body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: #fff;
+  gap: 2px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  border: none;
+  background-color: gainsboro;
+  font-size: 1, 2rem;
+  font-weight: 500;
+  transition: 0.5 ease-in-out;
+  height: 110px;
+}
+
+.btn:active {
+  background-color: hsl(177, 79%, 90%);
+}
+
+.btn.span-2 {
+  grid-column: span 2;
+}
+.operator {
+  background-color: rgb(253, 143, 161);
+}
+
+/* Add a media query for phone screens */
+@media (max-width: 480px) {
+  .calculator {
+    width: 100%; /* Adjusted width for mobile */
+    height: 100%;
+  }
+
+  .btn {
+    padding: 1rem; /* Adjusted padding for mobile */
+    font-size: 1rem; /* Adjusted font size for mobile */
+    height: 102px;
+  }
+
+  .screens{
+    min-height: 170px;
+  }
+
+  /* You can add more adjustments as needed for mobile screens */
+}
+@media(max-width: 881px){
+  .calculator {
+    width: 100%; /* Adjusted width for mobile */
+    height: 100%;
+  }
+
+  .btn {
+    padding: 1rem; /* Adjusted padding for mobile */
+    font-size: 1rem; /* Adjusted font size for mobile */
+    height: 100px;
+  }
+
+   .screens{
+    min-height: 180px;
+  }
+
+}
